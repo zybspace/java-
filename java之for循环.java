@@ -48,6 +48,7 @@ System.out.println(str);/* 依次输出“A”、“B”、“C”、“D” */
 } 
 
 
+三、知识点
 给循环取名字
 public static void main(String[] args){
   Scanner scan = new Scanner(System.in);
@@ -63,6 +64,7 @@ public static void main(String[] args){
   }
 }
 
+
 for循环的执行顺序
 for(a; b; c){
   d;
@@ -70,5 +72,15 @@ for(a; b; c){
 a-->b-->d-->c-->b-->d-->c-->b
 最后一次执行的一定是判断
 
+
 break:跳出当前循环体
 continue:跳出当前循环的当次循环
+
+
+i++:先赋值后运算
+++i：先运算后赋值
+byte b = 1;
+//b = b + 1; //会报错，不能从高类型到底类型的自动转换
+byte b2 = b++;
+System.out.print(b2); //结果为1
+System.out.print(b); //结果为2
