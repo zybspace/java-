@@ -62,3 +62,13 @@ public static void main(String[] args){
     System.out.println(i);
   }
 }
+
+for循环的执行顺序
+for(a; b; c){
+  d;
+}
+a-->b-->d-->c-->b-->d-->c-->b
+最后一次执行的一定是判断
+
+break:跳出当前循环体
+continue:跳出当前循环的当次循环
