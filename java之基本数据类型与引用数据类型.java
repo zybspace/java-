@@ -7,3 +7,23 @@
 
 
 所有声明的变量存在栈内存中，new出的对象存在堆内存中
+
+基本数据类型除了float、double的封装类外，对象大多在常量池中（new除外，new是在堆内存中），String对象也大多在常量池中（new除外）。
+
+String str1 = "aaa";  //查找常量池中是否有“aaa”，有str1指向，没有则创建
+String str2 = "aaa";
+String str3 = new String("aaa");    //指向堆内存中创建的新空间
+String str4 = new String("aaa");
+str1 == str2 为true,都是指向常量池中的对象。
+str1 == str3 为false，str1指向常量池，str3指向堆内存空间
+
+对于基本数据类型“==”号比较的是值的大小是否相等
+对于引用数据类型“==”号比较的是变量的指向是否相同（如String）。
+对于String   equals方法比较的是变量的值是否相等
+对于其它引用类型大多比较的还是内存地址的指向（看类是否重写equals方法）
+str1.equals（str3）为true
+
+java中只有值传递，没有引用传递
+
+String s = new String("abc");创建了几个对象，分别在什么地方
+创建了两个对象 “abc”在常量池中创建了一个对象， new在堆内存中创建了一个对象
